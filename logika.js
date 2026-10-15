@@ -21,6 +21,7 @@ function hitungTersedia(daftar) {
 
     for(const item of daftar) {
         if (item.tersedia === true){
+            // Hanya Laptop yang tersedia yang boleh dihitung.
             jumlah++;
         }
     }
@@ -35,12 +36,12 @@ function hitungTersedia(daftar) {
 
 // LANGKAH 1 - Masukan: daftar Laptop dan ID yang ingin dicari, Keluaran: data laptop jika ditemukan, atau null jika tidak ditemukan.
 // LANGKAH 2 - Jika mencari ID 2, kembalikan data laptop dengan ID 2.
-//            Jika mencari id 99 dan tidak ada -> null.
+//             Jika mencari id 99 dan tidak ada -> null.
 // LANGKAH 3 - LANGKAH (pseudocode)
 //             Periksa setiap Laptop dalam daftar.
 //             Bandingkan ID laptop dengan ID yang dicari.
 //             Jika cocok, kembalikan data Laptop tersebut.
-//             Jika semua Laptop sudah diperiksa dan ridak cocok, kembalikan null. 
+//             Jika semua Laptop sudah diperiksa dan tidak cocok, kembalikan null. 
 // LANGKAH 4 - TERJEMAHKAN
 function cariBerdasarkanId(daftar, id) {
     for (const item of daftar) {
@@ -62,7 +63,7 @@ function cariBerdasarkanId(daftar, id) {
 //             Jika kategori "Bisnis" tidak tersedia -> [].
 // LANGKAH 3 - LANGKAH (pseudocode)
 //             Buat array kosong untuk menyimpan hasil pencarian.
-//             Periksa setiap Laptop dalam dafftar.
+//             Periksa setiap Laptop dalam daftar.
 //             Jika kategorinya cocok, masukkan Laptop ke array hasil.
 //             Kembalikan array hasil setelah semua laptop diperiksa ke array hasil.
 // LANGKAH 4 - TERJEMAHKAN
@@ -91,19 +92,19 @@ function saringKategori(daftar, kategori) {
 //             Periksa setiap Laptop dalam daftar.
 //             Jika Laptop tersedia, tambahkan harganya ke total dan tambahkan penghitung sebanyak 1.
 //             Jika penghitung 0, kembalikan null.
-//            Jika tidak, kembalikan total harga dibagi penghitung.
+//             Jika tidak, kembalikan total harga dibagi penghitung.
 // LANGKAH 4 - TERJEMAHKAN
 function rataRataTersedia(daftar) {
     let totalHarga = 0;
     let jumlahTersedia = 0;
 
     for (const item of daftar) {
-        if(item. tersedia === true) {
+        if(item.tersedia === true) {
             totalHarga += item.harga;
             jumlahTersedia++;
         }
     }
-    // Mencegah pembagian dengan nol jika ada laptop tersedia.
+    // Mencegah pembagian dengan nol jika tidak ada laptop tersedia.
     if (jumlahTersedia === 0) {
         return null;
     }
@@ -128,5 +129,5 @@ const semuaTidakTersedia = [
     { id: 7, nama: "Axioo Hype 3 ", kategori: "Mahasiswa", harga: 4000000, tersedia: false}
 ];
 
-console.log("F4 tidak adayang tersedia:", rataRataTersedia(semuaTidakTersedia));
+console.log("F4 tidak ada yang tersedia:", rataRataTersedia(semuaTidakTersedia));
 // __________________________________________________
