@@ -1,0 +1,167 @@
+
+/* 1. Pengaturan dasar halaman */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #243047;
+  background-color: #f4f7fb;
+}
+
+/* 2. Header dan navbar menggunakan Flexbox */
+.header-utama {
+  background-color: #173b68;
+  color: white;
+}
+
+.navigasi {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+}
+
+.logo {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.daftar-navigasi {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.daftar-navigasi a {
+  color: white;
+  text-decoration: none;
+}
+
+.daftar-navigasi a:hover {
+  text-decoration: underline;
+}
+
+/* 3. Bagian utama dan judul */
+.konten-utama {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+.bagian-pembuka {
+  padding: 24px 0;
+  text-align: center;
+}
+
+.bagian-pembuka h1 {
+  margin-bottom: 8px;
+  color: #173b68;
+}
+
+.bagian-pembuka p {
+  margin-top: 0;
+}
+
+/* 4. Daftar kartu menggunakan CSS Grid */
+.bagian-katalog h2 {
+  margin-bottom: 20px;
+  color: #173b68;
+}
+
+.daftar-laptop {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* 5. Isi setiap kartu */
+.kartu-laptop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #dce4ef;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(23, 59, 104, 0.06);
+}
+
+.kartu-laptop h3 {
+  margin: 0 0 8px;
+  color: #173b68;
+  line-height: 1.4;
+}
+
+.kartu-laptop p {
+  margin: 0;
+}
+
+.kategori-laptop {
+  font-weight: bold;
+}
+
+.harga-laptop {
+  color: #176b45;
+  font-weight: bold;
+}
+
+.status-laptop {
+  font-size: 0.95rem;
+}
+
+/* 6. Footer */
+.footer-utama {
+  margin-top: 32px;
+  padding: 20px 16px;
+  color: white;
+  background-color: #173b68;
+  text-align: center;
+}
+
+.footer-utama p {
+  margin: 0;
+}
+
+/* 7. Breakpoint pertama: tablet */
+@media (min-width: 768px) {
+  .navigasi {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .daftar-laptop {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .konten-utama {
+    padding: 28px 24px;
+  }
+}
+
+/* 8. Breakpoint kedua: laptop dan layar besar */
+@media (min-width: 1024px) {
+  .daftar-laptop {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .bagian-pembuka {
+    padding: 40px 0;
+  }
+}

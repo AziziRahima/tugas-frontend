@@ -1,13 +1,79 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Tugas 1A — buka Console (F12)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Laptop</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p>Semua hasil ada di <strong>Console</strong>: tekan F12 → tab Console.</p>
-  <!-- Jangan ubah urutan: data.js harus dimuat sebelum logika.js -->
-  <script src="data.js"></script>
-  <script src="logika.js"></script>
+  <header class="header-utama">
+    <nav class="navigasi">
+      <a class="logo" href="#beranda">LaptopKu</a>
+      <ul class="daftar-navigasi">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#katalog">Katalog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="beranda" class="konten-utama">
+    <section class="bagian-pembuka">
+      <h1>Katalog Laptop</h1>
+      <p>Temukan laptop untuk kuliah, bekerja, dan bermain game.</p>
+    </section>
+
+    <section id="katalog" class="bagian-katalog">
+      <h2>Daftar Laptop</h2>
+
+      <div class="daftar-laptop">
+        <article class="kartu-laptop">
+          <h3>Acer Aspire AL14-32P-37SA</h3>
+          <p class="kategori-laptop">Kategori: Mahasiswa</p>
+          <p class="harga-laptop">Harga: Rp5.500.000</p>
+          <p class="status-laptop">Ketersediaan: Tersedia</p>
+        </article>
+
+        <article class="kartu-laptop">
+          <h3>ASUS Vivobook Go 15 OLED</h3>
+          <p class="kategori-laptop">Kategori: Mahasiswa</p>
+          <p class="harga-laptop">Harga: Rp8.300.000</p>
+          <p class="status-laptop">Ketersediaan: Tersedia</p>
+        </article>
+
+        <article class="kartu-laptop">
+          <h3>Lenovo IdeaPad Slim 3</h3>
+          <p class="kategori-laptop">Kategori: Office</p>
+          <p class="harga-laptop">Harga: Rp6.800.000</p>
+          <p class="status-laptop">Ketersediaan: Tidak tersedia</p>
+        </article>
+
+        <article class="kartu-laptop">
+          <h3>HP Pavilion 14</h3>
+          <p class="kategori-laptop">Kategori: Office</p>
+          <p class="harga-laptop">Harga: Rp8.200.000</p>
+          <p class="status-laptop">Ketersediaan: Tersedia</p>
+        </article>
+
+        <article class="kartu-laptop">
+          <h3>ASUS TUF Gaming F15</h3>
+          <p class="kategori-laptop">Kategori: Gaming</p>
+          <p class="harga-laptop">Harga: Rp13.500.000</p>
+          <p class="status-laptop">Ketersediaan: Tidak tersedia</p>
+        </article>
+
+        <article class="kartu-laptop">
+          <h3>Lenovo LOQ 15</h3>
+          <p class="kategori-laptop">Kategori: Gaming</p>
+          <p class="harga-laptop">Harga: Rp15.000.000</p>
+          <p class="status-laptop">Ketersediaan: Tersedia</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-utama">
+    <p>&copy; 2026 Katalog Laptop. Dibuat untuk Tugas 1B.</p>
+  </footer>
 </body>
 </html>
